@@ -112,7 +112,7 @@ label {
 #banner::before {
   content: "";
   position: absolute;
-  background: url("/img/odin-lined.png") no-repeat;
+  background: url("../img/odin-lined.png") no-repeat;
   top: 26%;
   left: 15%;
   right: 60%;
