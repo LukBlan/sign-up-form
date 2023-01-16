@@ -12,3 +12,23 @@ body {
 img {
   width: 40%;
 }
+
+form {
+  box-shadow: 0 0 4px rgba(0,0,0,.5);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 10%;
+  margin-bottom: 20%;
+}
+
+section {
+  display: flex;
+  gap: 50px;
+}
+
+section > div {
+  display: flex;
+  flex-direction: column;
+}
