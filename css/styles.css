@@ -4,31 +4,41 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-size-small: 1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-big: 2rem;
+}
+
 body {
   display: flex;
+  background-color: #f8f8f8;
   min-height: 100vh;
 }
 
 img {
-  width: 40%;
+  width: 35%;
 }
 
-form {
-  box-shadow: 0 0 4px rgba(0,0,0,.5);
-  width: 100%;
+#main-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   margin-top: 10%;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
 }
 
-section {
-  display: flex;
-  gap: 50px;
-}
-
-section > div {
+#header-message {
   display: flex;
   flex-direction: column;
+  font-weight: bold;
+  gap: 20px;
+  padding: 50px;
+}
+
+#header-message > p:first-child {
+  font-size: var(--font-size-medium);
+}
+
+#input-section {
+  background-color: white;
 }
