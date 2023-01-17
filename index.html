@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Sign Up Now!</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js" defer></script>
   </head>
 
   <body>
-    <span id="banner"></span>
-    <span id="letters"></span>
-    <img src="./img/background.jpg" alt="image of a plant">
+    <div id="background-image">
+      <div><img src="./img/odin-lined.png" alt="The Odin Project Logo"> <p>Odin</p></div>
+    </div>
 
     <div id="main-section">
       <div id="header-message">
@@ -19,39 +19,39 @@
         <p>You know you want to.</p>
       </div>
 
-      <form action="" method="post">
+      <form action="" method="get">
         <div id="input-section">
           <h2>Let's do this!</h2>
           <section>
             <div>
               <label for="first-name">First Name</label>
-              <input id="first-name" type="text">
+              <input id="first-name" value="" type="text" required>
             </div>
             <div>
               <label for="last-name">Last Name</label>
-              <input id="last-name" type="text">
+              <input id="last-name" value="" type="text" required>
             </div>
           </section>
 
           <section>
             <div>
               <label for="email">Email</label>
-              <input id="email" type="email">
+              <input id="email" value="" type="email" required>
             </div>
             <div>
               <label for="phone-number">Phone Number</label>
-              <input id="phone-number" type="tel">
+              <input id="phone-number" value="" type="tel" required>
             </div>
           </section>
 
           <section>
             <div>
               <label for="password">Password</label>
-              <input id="password" type="password">
+              <input id="password" value="" type="password" required>
             </div>
             <div>
               <label for="repeat-password">Confirm Password</label>
-              <input id="repeat-password" type="password">
+              <input id="repeat-password" value="" type="password" required>
             </div>
           </section>
         </div>
