@@ -19,15 +19,16 @@ function checkPassword() {
   const userPassword = inputPassword.value;
   const userRepeatPassword = inputRepeatPassword.value;
 
-  if (userPassword !== "" && userRepeatPassword !== "" && userPassword !== userRepeatPassword) {
-    inputPassword.className = "invalid-input";
-    inputPassword.setCustomValidity("Invalid field.");
-    inputRepeatPassword.className = "invalid-input";
-    inputRepeatPassword.setCustomValidity("Invalid field.");
-  } else if (userPassword === userRepeatPassword && userPassword !== ""){
+
+ if (userPassword === userRepeatPassword && userPassword !== "" && userRepeatPassword !== ""){
     inputPassword.className = "valid-input";
     inputRepeatPassword.className = "valid-input";
     inputPassword.setCustomValidity('');
     inputRepeatPassword.setCustomValidity('');
+  } else {
+    inputPassword.className = "invalid-input";
+    inputPassword.setCustomValidity("Invalid field.");
+    inputRepeatPassword.className = "invalid-input";
+    inputRepeatPassword.setCustomValidity("Invalid field.");
   }
 }
