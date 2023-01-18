@@ -6,7 +6,11 @@ passwordInput.forEach(input => input.addEventListener("focusout", checkPassword)
 
 
 function styleInput(event) {
-  event.target.className = (event.target.checkValidity())? "": "invalid-input";
+  if(event.target.checkValidity()) {
+    event.target.className = ""
+  } else {
+    event.target.className ="invalid-input";
+  }
 }
 
 function checkPassword() {
@@ -17,9 +21,13 @@ function checkPassword() {
 
   if (userPassword !== "" && userRepeatPassword !== "" && userPassword !== userRepeatPassword) {
     inputPassword.className = "invalid-input";
+    inputPassword.setCustomValidity("Invalid field.");
     inputRepeatPassword.className = "invalid-input";
+    inputRepeatPassword.setCustomValidity("Invalid field.");
   } else if (userPassword === userRepeatPassword && userPassword !== ""){
     inputPassword.className = "valid-input";
     inputRepeatPassword.className = "valid-input";
+    inputPassword.setCustomValidity('');
+    inputRepeatPassword.setCustomValidity('');
   }
 }
