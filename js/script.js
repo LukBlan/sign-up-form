@@ -3,8 +3,6 @@ const passwordInput = document.querySelectorAll("input[type='password']");
 inputs.forEach(input => input.addEventListener("focusout", styleInput))
 passwordInput.forEach(input => input.addEventListener("focusout", checkPassword))
 
-
-
 function styleInput(event) {
   if(event.target.checkValidity()) {
     event.target.className = ""
