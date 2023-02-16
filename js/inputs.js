@@ -1,35 +1,28 @@
 (function inputs() {
-  const inputPassword = document.getElementById("password");
-  const inputRepeatPassword = document.getElementById("repeat-password");
+  // Cache DOM
+  const inputSection = document.getElementById("input-section");
+  const inputPassword = inputSection.querySelector("#password");
+  const inputRepeatPassword = inputSection.querySelector("#repeat-password");
 
-  document.body.addEventListener("focusout", checkInputValidity);
+  // Events Bind
+  inputSection.addEventListener("focusout", checkInputValidity);
 
   function checkInputValidity(event) {
     const element = event.target;
-    if (element.nodeName === "INPUT") {
-      if (element.type.includes("password")) {
-        passwordValidity()
-      } else {
-        textValidity(element);
-      }
+    if (element.type.includes("password")) {
+      passwordValidity()
+    } else {
+      textValidity(element);
     }
   }
 
   function textValidity(element) {
-    if(element.checkValidity()) {
-      if (element.className.includes("invalid-input")) {
-        element.classList.remove("invalid-input")
-      }
-      if (!element.className.includes("valid-input")) {
-        element.classList.add("valid-input")
-      }
+    if (element.checkValidity()) {
+      element.classList.remove("invalid-input");
+      element.classList.add("valid-input");
     } else {
-      if (!element.className.includes("invalid-input")) {
-        element.classList.add("invalid-input")
-      }
-      if (element.className.includes("valid-input")) {
-        element.classList.remove("valid-input")
-      }
+      element.classList.add("invalid-input");
+      element.classList.remove("valid-input");
     }
   }
 
